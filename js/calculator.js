@@ -3,11 +3,15 @@
  */
 var calculator = (function () {
 
-  function add(numberString) {
+    function add(numberString) {
 
-    return 0;
-  }
+        if (numberString != "") {
+            return parseInt(numberString);
+        }
 
-  return {add: add};
+        return 0;
+    }
+
+    return {add: add};
 
 }());
