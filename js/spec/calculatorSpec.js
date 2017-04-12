@@ -31,4 +31,10 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("a,1")).toBe(-1);
     });
 
+    it("should throw exception when given negative input", function () {
+        expect(function () {
+           calculator.add("-1");
+        }).toThrow("No negative numbers allowed.");
+    });
+
 });

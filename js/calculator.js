@@ -7,6 +7,13 @@ var calculator = (function () {
 
         if (numberString != "") {
 
+            if (_.include(numberString, "-")) {
+                throw{
+                    name: "InputError",
+                    message: "No negative numbers allowed."
+                }
+            }
+
             if (numberString.match(/[a-zA-Z]/)) {
                 return -1;
             }
@@ -24,6 +31,7 @@ var calculator = (function () {
 
         return 0;
     }
+
 
     return {add: add};
 
