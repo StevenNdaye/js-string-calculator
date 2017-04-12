@@ -19,5 +19,9 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("4\n2")).toBe(6);
     });
 
+    it("should return sum of numbers separated by multiple delimiters", function () {
+        expect(calculator.add("4,2#3\n4")).toBe(13);
+    });
+
 
 });
