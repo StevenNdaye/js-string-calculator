@@ -27,5 +27,8 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("a,b")).toBe(-1);
     });
 
+    it("should return -1 if the input contains letters and numeric values", function () {
+        expect(calculator.add("a,1")).toBe(-1);
+    });
 
 });
