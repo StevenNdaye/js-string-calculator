@@ -7,7 +7,11 @@ var calculator = (function () {
 
         if (numberString != "") {
 
-            if (_.include(numberString, ",") || _.include(numberString,"#") || _.include(numberString, "\n")) {
+            if (numberString.match(/[a-zA-Z]/)) {
+                return -1;
+            }
+
+            if (_.include(numberString, ",") || _.include(numberString, "#") || _.include(numberString, "\n")) {
                 var sum = 0;
                 numberString.split(/[,#\n]/).forEach(function (x) {
                     sum += parseInt(x);

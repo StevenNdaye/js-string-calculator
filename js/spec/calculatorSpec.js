@@ -23,5 +23,9 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("4,2#3\n4")).toBe(13);
     });
 
+    it("should return -1 if the input contains letters and delimiters instead of numbers and delimiters", function () {
+        expect(calculator.add("a,b")).toBe(-1);
+    });
+
 
 });
