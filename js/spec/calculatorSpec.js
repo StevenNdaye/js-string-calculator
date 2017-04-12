@@ -11,5 +11,9 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("1,2")).toBe(3);
     });
 
+    it("should return sum of numbers separated by a /'#/'", function () {
+        expect(calculator.add("2#2")).toBe(4);
+    });
+
 
 });
