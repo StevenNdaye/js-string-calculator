@@ -15,5 +15,9 @@ describe("Calculator Spec for the add function", function () {
         expect(calculator.add("2#2")).toBe(4);
     });
 
+    it("should return sum of numbers separated by a newline", function () {
+        expect(calculator.add("4\n2")).toBe(6);
+    });
+
 
 });

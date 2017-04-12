@@ -7,9 +7,9 @@ var calculator = (function () {
 
         if (numberString != "") {
 
-            if (_.include(numberString, ",") || _.include(numberString,"#")) {
+            if (_.include(numberString, ",") || _.include(numberString,"#") || _.include(numberString, "\n")) {
                 var sum = 0;
-                numberString.split(/[,#]/).forEach(function (x) {
+                numberString.split(/[,#\n]/).forEach(function (x) {
                     sum += parseInt(x);
                 });
 
